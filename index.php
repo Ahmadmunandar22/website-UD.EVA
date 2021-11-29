@@ -16,7 +16,7 @@ require_once("session_check.php")
 
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css" />
+    <!-- <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css" /> -->
 
     </head>
 
@@ -33,6 +33,19 @@ require_once("session_check.php")
                 <li><a href="#" target="_blank">Tugas6</a></li>
             </ul>
         </div> -->
+
+
+       
+        <!-- tombol link ke Whatsapp -->
+
+        <div style="position:fixed;left:20px;bottom:20px;z-index:99999;">
+        <a href="https://wa.widget.web.id/8ba283" target="_blank"><img src="https://wa.widget.web.id/assets/img/tombol-wa.png"></a>
+<!-- <a href="https://api.whatsapp.com/send?phone=+6289637800056&text=Halo">
+<button style="background:#32C03C;vertical-align:center;height:36px;border-radius:5px"> -->
+<!-- <img src="https://web.whatsapp.com/img/favicon/1x/favicon.png">  -->
+<!-- Whatsapp Kami</button> -->
+</div>
+
 <!--logo-->
 
 <div class="wrapper-logo">
@@ -45,6 +58,13 @@ require_once("session_check.php")
 <ul class="nav justify-content-center navbar-light  fixed">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#carouselExampleIndicators">home</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Product</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#wrapper-masker">Konektor Masker Rajut</a></li>
+      <li><a class="dropdown-item" href="#">Keripik singong</a></li>
+    </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#product">Product</a>
@@ -139,6 +159,23 @@ require_once("session_check.php")
         </div>
     </div>
 </div>
+<!-- bagian our story -->
+
+<div class="card mb-3" style="height: 450px; margin:auto; margin-left:20px;margin-right: 20px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="image/2.jpg" class="img-fluid rounded-start" style="width: 400px;" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h1 class="card-title">Our Story</h1>
+        <p class="card-text"></br></br> is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">read more</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- bagian product keripik
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
@@ -178,10 +215,10 @@ require_once("session_check.php")
     </div>
   </div>
 </div> -->
-<!--bagian package-->
-<div class="wrapper-package">
+<!--bagian masker-->
+<div class="wrapper-masker">
     <h2> UD.EVA<br>Masker rajut </h2>
-    <div class="logo-package">
+    <div class="logo-masker">
         <ul>
             <li class="gift"><img src="image/2.jpg" alt=""><p><strong>masker rajut polos</strong></p><h4 class="price">price Rp.6.000</h4>
             <a href="" class="buy">Buy</a></li>
@@ -271,18 +308,14 @@ require_once("session_check.php")
     <!-- bagian footer -->
     <div class="wrapper-footer">
         <div class="footer">
-            <p>made with <i class="fas fa-heart"></i> & <i class="fas fa-coffee">from situbondo.</p>
+            <p>made with  & from situbondo.</p>
         </div>
 
         <div class="copyright">
             <p>Copyright &copy2021 UD. EVA</p>
         </div>
     </div>
-    <!--====== BACK TO TOP PART START ======-->
-    
-    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
-
-
-    </div>
+ </div>
+      <!-- tombol scrol up go to top -->
     </body>     
 </html>

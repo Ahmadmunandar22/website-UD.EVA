@@ -1,13 +1,13 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     text-decoration: none;
-}
+} */
 body{
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    background: #eeeeee;
+    background-image: url(image/floor-tile.png);
 }
 /* untuk backgrond home
 section{
@@ -64,16 +64,18 @@ section::after{
 #check:checked ~ .side-bar{
     left: 0;
 } */
+/* back to top */
 
 
 /*untuk bagian header*/
 .nav{
     height: 40px;
+    position:fixed;
 }
 .wrapper{
     width: 1100px;
     margin: auto;
-    position: relative;
+    position: fixed;
     line-height: 60px;
 }
 .wrapper-logo{
@@ -332,15 +334,15 @@ section::after{
     transition: 0.3s;
     transition-property: color,'background';
 } */
+/* untuk bagian our story */
 
-
-/*untuk bagiam package*/
-.wrapper-package{
+/*untuk bagiam masker*/
+.wrapper-masker{
     width: 100%;
     height: auto;
     background: #a09898ee;
 }
-.wrapper-package h2{
+.wrapper-masker h2{
     color: #363636;
     text-align: center;
     padding-top: 20px;
@@ -348,17 +350,17 @@ section::after{
     font-size: 40px;
     height: auto;
 }
-.logo-package{
+.logo-masker{
     width: 100%;
     margin-left: 0;
     height: auto;
 
 }
-.logo-package ul{
+.logo-masker ul{
     list-style-type: none;
     display: flex;
 }
-.logo-package ul li.gift{
+.logo-masker ul li.gift{
     margin: 10px 10px 40px 10px;
     cursor: pointer;
     border-radius: 20px;
@@ -369,7 +371,7 @@ section::after{
     width: 220px;
 
 }
-.logo-package ul li.gift:hover{
+.logo-masker ul li.gift:hover{
     background: #616161ee;
     border-radius: 10px;
     background: rgba(160, 152, 152, 0.933);
@@ -396,7 +398,7 @@ section::after{
     background: chocolate;
 }
 
-/* .logo-package ul li.logo2{
+/* .logo-masker ul li.logo2{
     margin: 20px 10px ;
     cursor: pointer;
     border-radius: 20px;
@@ -406,14 +408,14 @@ section::after{
     height: 220px;
     width: 220px;
 }
-.logo-package ul li.logo2:hover{
+.logo-masker ul li.logo2:hover{
     background: #616161ee;
     border-radius: 20px;
     background: rgba(160, 152, 152, 0.933);
     box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.274),
                 15px 15px 13px 0px  rgba(129, 128, 128, 0.384);
 }
-.logo-package ul li.logo3{
+.logo-masker ul li.logo3{
     
     height: 220px;
     width: 220px;
@@ -425,7 +427,7 @@ section::after{
     transition-property: 'background', 'box-shadow';
     text-align: center;
 }
-.logo-package ul li.logo3:hover{
+.logo-masker ul li.logo3:hover{
     background: #6e6868ee;
     border-radius: 20px;
     background: rgba(160, 152, 152, 0.933);
@@ -433,10 +435,10 @@ section::after{
                 -15px 15px 13px rgba(129, 128, 128, 0.384); 
 
 }*/
-.logo-package ul li img{
+.logo-masker ul li img{
     padding-top: 10px;
 }
-.logo-package ul li p{
+.logo-masker ul li p{
     color: #363636;
     text-align: center;
     font-family: 'calibri';
@@ -444,7 +446,7 @@ section::after{
     font-size: 14px;
     margin-top: 10px;
 }
-.logo-package ul li h4{
+.logo-masker ul li h4{
     font-size: 17px;
     text-align: center;
     color: #363636;
@@ -794,12 +796,12 @@ html{
         width: 100%;
         position: relative;
     } */
-    .wrapper-package{
+    .wrapper-masker{
         margin:  auto;
         width: 100px;
         position: relative;
     }
-    .logo-package{
+    .logo-masker{
         width: 100%;
         margin: 10px auto;
     }
