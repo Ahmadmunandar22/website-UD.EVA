@@ -1,874 +1,377 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-} */
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    background-image: url(image/floor-tile.png);
-}
-/* untuk backgrond home
-section{
-    height: 100vh;
-    background-image: url(image/3.jpg);
-    background-size: cover;
-    position: relative;
-}
-section::after{
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.274);
-} */
-/* untuk sidebar
-.mobile-menu{
-    float: right;
-    font-size: 20px;
-    cursor: pointer;
-}
-.side-bar{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: -300px;
-    width: 300px;
-    background-color: #464646;
-    transition: .3s;
-    z-index: 5;
-}
-#check{
+/* scroll up */
+#myBtn {
     display: none;
-}
-.side-bar ul li a{
-    color: #e4e4e4;
-    transition: .3s;
-    transition-property: color;
-}
-.side-bar ul li a:hover{
-    color: #ffffff;
-}
-.side-bar ul li{
-    padding: 24px;
-    transition: .3s;
-    transition-property: 'background';
-}
-.side-bar ul li:hover{
-    background: chocolate;
-}
-#check:checked ~ .side-bar{
-    left: 0;
-} */
-/* back to top */
-
-
-/*untuk bagian header*/
-.nav{
-    height: 40px;
-    position:fixed;
-}
-.wrapper{
-    width: 1100px;
-    margin: auto;
-    position: fixed;
-    line-height: 60px;
-}
-.wrapper-logo{
-    background: white;
-}
-.logo img{
-    width: 80px;
-}
-.logo{
-    float: left;
-    color: #dadada;
-    font-size: 37px;
-    margin-top: 11px;
-    transition: 0.3s;
-    transition-property: color;
-}
-.logo i:hover{
-    color:#ffffff;
-}
-.menu{
-    float: right;
-}
-.header{
-    width: 100%;
-    background: #616161ee;
-    position: sticky;
-    top: 0;
-    z-index: 3;
-    display: flex;
-}
-.header ul{
-    list-style-type: none;
-    display: flex;
-    overflow: hidden;
-    margin: auto;
-}
-.header ul li{
-    float: left;
-}
-.header ul li a{
-    color: #dadada;
-    text-align: center;
-    padding: 0px 19px;
-    font-size: 18px;
-    transition:0.3s;
-    transition-property: color;
-    padding: 10px 18px;
-}
-.header ul li a:hover{
-    color: #ffffff;
-}
-
-/* carousel-inner */
-.carousel-inner{
-    height: 450px;
-}
-/* untuk bagian Home
-.wrapper-home{
-    width: 100%;
-    margin: 190px auto;
-    position: absolute;
-    z-index: 2;
-    text-align: center;
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.content-home{
-    background: #616161a6;
-    margin: 0px 420px;
-    padding:10px 0px;
-    border-radius: 20px;
-}
-.content-home h2{
-    color: #ececec;
-    font-size: 55px;
-    font-weight: bold;
-    margin-bottom: 18px;
-}
-.content-home p{
-    color: #ececec;
-    font-size: 20px;
-    margin-bottom: 12px;
-}
-.content-home p a{
-    background: #dedede;
-    color: #414141;
-    border-radius: 20px;
-    padding:2px 10px;
-    transition: .3s;
-    transition-property: color,'background';
-}
-.content-home p a:hover{
-    color: #dedede;
-    background: #414141;
-} */
-
-
-/*untuk bagina product*/
-.wrapper-signature{
-    width: 1200px;
-    margin:20px auto;
-    position:sticky;
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: rgb(119, 108, 108); 
+    color: white; 
+    cursor: pointer; 
+    padding: 5px; 
+    border-radius: 30px; 
+  }
+  
+  #myBtn:hover {
+    background-color: #555; 
+  }
+/* navbar */
+.navbar {
+    position: relative;
     z-index: 1;
 }
-.text-signature{
-    text-align: center;
-}
-.text-signature1 p{
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 5px;
-    margin-bottom: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #353535;
-}
-.text-signature img{
-    width: 200px;
-    height: 50%;
-    margin-top: 65px;
-}
-.text-signature h1{
-    font-size: 38px;
-    color: chocolate;
-    margin-top: 60px;
-    margin-right: 30px;
-    margin-left: 30px;
-    height: auto;
-}
- .signature{
-    display: flex;
-}
-    .sign{
-        float: left;
-        margin: 10px 30px 10px 35px;
-        border: 1px solid #d3d3d3;
-        text-align: center;
-        padding-bottom: 25px;
-        background: #ffffff;
-    }
-    .sign h2{
-        font-size: 20px;
-        color: chocolate;
-        margin: 10px 0px 18px;
-    }
-    .sign p{
-        font-family: 'calibri';
-        font-weight:200;
-        margin-bottom: 10px;
-    }
-    .sign p.price{
-        margin-bottom: 30px;
-        font-size: 17px;
-        font-weight: bold;
-    }
-    .sign a.buy{
-        color: #f1f1f1;
-        background: #414141;
-        padding: 3px 20px;
-        border-radius: 20px;
-        font-size: 17px;
-        transition: 0.3s;
-        transition-property: color,'background';
-        text-decoration: none;
-    }
-    .sign a.buy:hover{
-        color: #ececec;
-        background: chocolate;
-    }/*
-.sign2{
-        float: left;
-        margin: 10px 30px 10px 0px;
-        border: 1px solid #dfdfdf;
-        text-align: center;
-        background: #ffffff;
-        padding-bottom: 25px;
-    }
-    .sign2 h2{
-        font-size: 20px;
-        color: chocolate;
-        margin:10x 0px 18px;
-
-    }
-    .sign2 p{
-        font-family: 'calibri';
-        font-weight: 200;
-        margin-bottom: 100px;
-    }
-    .sign2 p.price{
-        margin-bottom: 15px;
-        font-size: 17px;
-        font-weight: bold;
-    }
-    .sign2 a.buy{
-        color: #f1f1f1;
-        background: #414141;
-        padding: 3px 20px;
-        border-radius: 20px;
-        font-size: 17px;
-        transition: 0.3s;
-        transition-property: color,'background';
-    }
-    .sign2 a.buy:hover{
-        color: #ececec;
-        background: chocolate;
-    }
-.sign3{
-    float: left;
-    margin: 10px 35px 10px 0px;
-    border: 1px solid #dfdfdf;
-    text-align: center;
-    background: #ffffff;
-    padding-bottom: 25px;
-}
-    .sign3 h2{
-        font-size: 20px;
-        color: chocolate;
-        margin:10px 0px 18px;
-
-    }
-    .sign3 p{
-        font-family: 'calibri';
-        font-weight: 200;
-        margin-bottom: 100px;
-    }
-    .sign3 p.price{
-        margin-bottom: 15px;
-        font-size: 17px;
-        font-weight: bold;
-    }
-    .sign3 a.buy{
-        color: #f1f1f1;
-        background: #414141;
-        padding: 3px 20px;
-        border-radius: 20px;
-        font-size: 17px;
-        transition: 0.3s;
-        transition-property: color,'background';
-    }
-    .sign3 a.buy:hover{
-        color: #ececec;
-        background: chocolate;
-    } */
-/* .col img{
-    text-align: center;
-    width: 220px;
-    height: 220px;
-}
-.col a.buy{
-    color: #f1f1f1;
-    background: #414141;
-    padding: 3px 20px;
-    border-radius: 20px;
-    font-size: 17px;
-    transition: 0.3s;
-    transition-property: color,'background';
-} */
-/* untuk bagian our story */
-
-/*untuk bagiam masker*/
-.wrapper-masker{
-    width: 100%;
-    height: auto;
-    background: #a09898ee;
-}
-.wrapper-masker h2{
-    color: #363636;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    font-size: 40px;
-    height: auto;
-}
-.logo-masker{
-    width: 100%;
-    margin-left: 0;
-    height: auto;
-
-}
-.logo-masker ul{
-    list-style-type: none;
-    display: flex;
-}
-.logo-masker ul li.gift{
-    margin: 10px 10px 40px 10px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: 0.3s;
-    transition-property: 'background', 'box-shadow';
-    text-align: center;
-    height: auto;
-    width: 220px;
-
-}
-.logo-masker ul li.gift:hover{
-    background: #616161ee;
-    border-radius: 10px;
-    background: rgba(160, 152, 152, 0.933);
-    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.274),
-                15px 15px 13px rgba(129, 128, 128, 0.384);
-}
-.gift p.price{
-    margin-bottom: 30px;
-    font-size: 17px;
-    font-weight: bold;
-}
-.gift a.buy{
-    color: #f1f1f1;
-    background: #414141;
-    padding: 3px 20px;
-    border-radius: 20px;
-    font-size: 17px;
-    transition: 0.3s;
-    transition-property: color,'background';
-    text-decoration: none;
-}
-.gift a.buy:hover{
-    color: #ececec;
-    background: chocolate;
+.navbar-brand {
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 32px;
 }
 
-/* .logo-masker ul li.logo2{
-    margin: 20px 10px ;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: 0.3s;
-    transition-property: 'background', 'box-shadow';
+/* jumbotron */
+.jumbotron{
+    height: 540px;
     text-align: center;
-    height: 220px;
-    width: 220px;
+    position: relative;
 }
-.logo-masker ul li.logo2:hover{
-    background: #616161ee;
-    border-radius: 20px;
-    background: rgba(160, 152, 152, 0.933);
-    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.274),
-                15px 15px 13px 0px  rgba(129, 128, 128, 0.384);
+.jumbotron .container{
+    position: relative;
+    z-index: 1;
 }
-.logo-masker ul li.logo3{
-    
-    height: 220px;
-    width: 220px;
-    float: left;
-    margin: 20px 10px ;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: 0.3s;
-    transition-property: 'background', 'box-shadow';
-    text-align: center;
-}
-.logo-masker ul li.logo3:hover{
-    background: #6e6868ee;
-    border-radius: 20px;
-    background: rgba(160, 152, 152, 0.933);
-    box-shadow: 10px -10px 10px rgba(255, 255, 255, 0.274),
-                -15px 15px 13px rgba(129, 128, 128, 0.384); 
-
-}*/
-.logo-masker ul li img{
-    padding-top: 10px;
-}
-.logo-masker ul li p{
-    color: #363636;
-    text-align: center;
-    font-family: 'calibri';
-    font-weight: 500;
-    font-size: 14px;
-    margin-top: 10px;
-}
-.logo-masker ul li h4{
-    font-size: 17px;
-    text-align: center;
-    color: #363636;
-}
-
-
-/*untuk bagian wrapper*/
-.wrapper-promo{
-    width: 1100px;
-    margin: 30px auto 20px;
-}
-.wrapper-promo h2{
-    text-align: center;
-    color: #353535;
-    font-size: 40px;
-}
-.promo ul{
-    list-style-type: none;
-    display: flex;
-}
-.promo ul li {
-    float: left;
-    background: #ffffff;
-    padding-bottom: 30px;
-    margin: 15px;
-    border: 1px solid #d3d3d3;
-    text-align: center;
-}
-.promo ul li h3{
-    margin: 20px 0px 10px 20px;
-    color: #353535;
-    text-align: left;
-}
-.promo ul li p{
-    margin: 0px 20px;
-    font-family: 'calibri';
-    font-weight: 100;
-    font-size: 15px;
-    color: #5c5c5c;
-    text-align: left;
-}
-.promo ul li p.text{
-    margin-top: 10px;
-    margin-bottom: 30px;
-    font-family: 'calibri';
-    font-size: 16px;
-    font-weight: 500px;
-}
-.promo ul li a{
-    text-align: center;
-    background: #707070;
-    padding: 3px 8px;
-    border-radius: 20px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #f3f3f3;
-    transition: 0.3s;
-    transition-property:  color,'background';
-}
-.promo ul li a:hover{
-    color: #f1f1f1;
-    background: #333333;
-}
-
-
-
-/*untuk bagian about*/
-.wrapper-est{
-    background-image: linear-gradient(rgba(0,0,0,0,0.603), rgba(51,51,51,0.397)), url(image/1jpg);
-    height: 60vh;
-    width: 100%;
-    background-size: cover;
-}
-.content{
-    width: 900px;
-    color: #ffffff;
-    padding-top: 125px;
-    margin: 50px auto;
-}
-.content h2{
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-.content p{
-    font-size: 16px;
-}
-.wrapper-store{
-    width: 1000px;
-    margin:40px auto;
-    text-align: center;
-    padding-bottom: 80px;
-    color: #2e2e2e;
-}
-.content1{
-    margin-top: 20px;
-    font-size: 19px;
-}
-.content1 p{
-    font-size: 15px;
-}
-.content2{
-    display: flex;
-    margin-top: 90px;
-    text-align: center;
-}
-.content2 h2{
-    margin: 0px 70px;
-}
-.content2 h2 p{
-    font-size: 15px;
-    font-weight: 500;
-}
-
-/* bagian contact */
-.wrapper-best{
-    height: 50vh;
-    margin: auto;
-    background: #c7b8b8e1;
-    background-image: url(image/21.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size: 59%;
-    background-position: bottom right;
-}
-.content3 {
-    width: 650px;
-    margin-left: 80px;
-    padding: 60px 10px;
-}
-.content3 h2{
-    margin-bottom: 20px;
-    font-size: 35px;
-    color: #414141;
-}
-.content3 p{
-    font-size: 17px;
-    color:#414141;
-    font-family: 'calibri';
-}
-
-/*untuk bagian footer*/
-.wrapper-footer{
-    height: 13vh;
-    width: 100%;
-    background: #555555;
-}
-.footer{
-    color: #d4d4d4;
-    padding: 30px;
-    font-size: 15px;
-    font-family: 'calibri';
-    float: left;
-}
-.copyright{
-    float: right;
-    padding: 30px;
-    font-size: 15px;
-    font-family: 'calibri';
-    color: #d4d4d4;
-
-}
-html{
-    scroll-behavior: smooth;
-}
-/* untuk bagian contact/footer
-.footer-area {
-    position: relative; }
-  
-  .footer-area::before {
-    position: absolute;
+.jumbotron::after{
     content: '';
-    background-image: url(../images/footer-bg.png);
-    background-repeat: no-repeat;
-    background-position: top center;
+    display: block;
     width: 100%;
-    height: 770px;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+    position: absolute;
     bottom: 0;
-    left: 0;
-    background-size: 100% 100%;
-    z-index: -1; }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .footer-area::before {
-        height: 1450px; } }
-    @media (max-width: 767px) {
-      .footer-area::before {
-        height: 1700px; } }
-  
-  @media (max-width: 767px) {
-    .footer-widget {
-      padding-top: 30px;
-      padding-bottom: 80px; } }
-  
-  .footer-logo .footer-social li {
-    display: inline-block;
-    margin-left: 12px; }
-    .footer-logo .footer-social li:first-child {
-      margin-left: 0; }
-    .footer-logo .footer-social li a {
-      font-size: 16px;
-      color: #777;
-      width: 35px;
-      height: 35px;
-      line-height: 38px;
-      text-align: center;
-      background-color: #fff;
-      -webkit-box-shadow: 0px 5px 21px 0px rgba(254, 119, 101, 0.2);
-      -moz-box-shadow: 0px 5px 21px 0px rgba(254, 119, 101, 0.2);
-      box-shadow: 0px 5px 21px 0px rgba(254, 119, 101, 0.2);
-      -webkit-transition: all 0.4s ease-out 0s;
-      -moz-transition: all 0.4s ease-out 0s;
-      -ms-transition: all 0.4s ease-out 0s;
-      -o-transition: all 0.4s ease-out 0s;
-      transition: all 0.4s ease-out 0s;
-      border-radius: 50%; }
-      .footer-logo .footer-social li a:hover {
-        background-color: #fe7865;
-        color: #fff; }
-  
-  .f-title {
-    font-size: 20px;
-    padding-bottom: 5px; }
-  
-  .footer-link ul li {
-    margin-top: 15px; }
-    .footer-link ul li a {
-      color: #777;
-      font-size: 16px;
-      -webkit-transition: all 0.4s ease-out 0s;
-      -moz-transition: all 0.4s ease-out 0s;
-      -ms-transition: all 0.4s ease-out 0s;
-      -o-transition: all 0.4s ease-out 0s;
-      transition: all 0.4s ease-out 0s; }
-      .footer-link ul li a:hover {
-        color: #fe7865; }
-  
-  .footer-info {
-    padding-left: 70px; }
-    @media only screen and (min-width: 992px) and (max-width: 1200px) {
-      .footer-info {
-        padding-left: 0; } }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .footer-info {
-        padding-left: 0; } }
-    @media (max-width: 767px) {
-      .footer-info {
-        padding-left: 0; } }
-  
-  .single-footer-info {
-    position: relative; }
-    .single-footer-info span {
-      font-size: 16px;
-      color: #777;
-      position: absolute;
-      top: 0;
-      left: 0; }
-    .single-footer-info .footer-info-content {
-      padding-left: 80px; }
-  
-  .footer-copyright {
-    border-top: 1px solid #ddd; }
-    .footer-copyright a {
-      color: #fe7865; }
-    .footer-copyright .copyright p {
-      color: #333; }
-      @media (max-width: 767px) {
-        .footer-copyright .copyright p {
-          font-size: 14px; } }
-  
-  .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 18px;
-    width: 40px;
-    line-height: 40px;
-    z-index: 99;
+}
+
+.jumbotron .display-4{
+    color: white;
+    margin-top: 150px;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.jumbotron .display-4 span{
+    font-weight: 500;
+}
+
+/* info panel */
+.info-panel{
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: -100px;
+    background-color: white;
+    padding: 10px;
+}
+.info-panel img{
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+.info-panel h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.info-panel p{
+    font-size: 14px;
+    color: #acacac;
+    margin-top: -5px;
+    font-weight: 200;
+}
+/* new produk */
+.newproduk {
+    margin-top: 60px;
     text-align: center;
-    display: none;
-    -webkit-box-shadow: 0px 0px 30px 0px rgba(156, 156, 156, 0.25);
-    -moz-box-shadow: 0px 0px 30px 0px rgba(156, 156, 156, 0.25);
-    box-shadow: 0px 0px 30px 0px rgba(156, 156, 156, 0.25);
-    -webkit-transition: all 0.4s ease-out 0s;
-    -moz-transition: all 0.4s ease-out 0s;
-    -ms-transition: all 0.4s ease-out 0s;
-    -o-transition: all 0.4s ease-out 0s;
-    transition: all 0.4s ease-out 0s;
-    color: #fff;
-    background-color: #fe7865; }
-    .back-to-top:hover {
-      color: #fe7865;
-      background-color: #fff; } */
-  
+    align-items: center;
+    font-family: 'Akaya Telivigala', cursive;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.newproduk h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: auto;
+    color: salmon; 
+    padding-bottom: 20px;
+}
+.newproduk .card-deck{
+    border: white;
+    align-items: center;
+}
+.newproduk .card-deck img{
+    padding-top: 30px;
+    width: 150px;
+    height: 250px;
+}
+.newproduk h4{
+    padding-top: 20px;
+    font-size: 12px;
+}
+/* ourstory */
+.ourstory {
+    margin-top: 30px;
+    text-align: center;
+    background-color: slategray ;
+    padding-right: 30px;
+    font-family: 'Akaya Telivigala', cursive;
 
+}
+.ourstory img{
+    width: 300px;
+    height: auto;
+}
 
+.ourstory h3 {
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-top: 60px;
+    color: salmon;
+    padding-right: 20px;
+    padding-left: -40px;
+}
+.ourstory h3 span {
+    font-weight: 500;
+}
+.ourstory p {
+    font-size: 12px;
+    font-weight: 200;
+    color:silver;
+    margin: 30px 0px;
+    padding-right: 20px;
+    padding-left: -40px;
+}
+.ourstory a{
+    align-items: center;
+    padding-right: 20px;
+    padding-left: -40px;
 
-/*media screen*/
-@media screen and (max-width:1080px) {
-    .header{
-        width: 100%;
+}
+/* where to buy */
+.wheretobuy{
+    font-family: 'Akaya Telivigala', cursive;
+    margin-top: 10px;
+    text-align: center;
+}
+.wheretobuy img{
+    width: 150px;
+    height: 100px;
+}
+.wheretobuy h3 {
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-top: 80px;
+    color: salmon;
+
+}
+.wheretobuy h3 span {
+    font-weight: 500;
+}
+.wheretobuy p {
+    font-size: 12px;
+    font-weight: 200;
+    color: #5a5a5a;
+    margin: 30px 0px;
+}
+/* contact */
+.contact {
+    margin-top: 25px;
+    background-color: rgb(158, 178, 199) ;
+    padding-right: 100px;
+    padding-top: 20px;
+}
+.contact h3 {
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+.contact p span {
+    font-weight: 400;
+    color: salmon;
+}
+.contact p {
+    font-size: 12px;
+    font-weight: 200;
+    color:rgb(0, 0, 0);
+    padding-right: 20px;
+    padding-left: -40px;
+}
+
+/*untuk bagian copyright*/
+.copyright{
+    font-size: 10px;
+    font-family: 'calibri';
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+/* desain yang sama */
+.tombol {
+    border-radius: 40px;
+}
+/* .store {
+    height: 200px;
+    width: max-content;
+} */
+/* desktop version */
+@media (min-width:768px) {
+    .navbar-brand, .nav-link{
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
     }
-    .wrapper{
-        width: 100%;
+    .nav-link {
+    text-transform: uppercase;
+    margin-right: 30px;
     }
-    section{
-        height: 60vh;
-    }
-    .wrapper-home{
-        width: 80%;
-        margin: 70px 45px;
-        position: absolute;
-    }
-    .content-home{
-        width: 100px;
-        position: relative;
-        width: 60vh;
-        margin: auto;
-    }
-    .wrapper-signature{
-        width: 100%;
-        height: 300vh;
-        margin: 10px auto;
-        position: relative;
-    }
-    .signature{
+    .nav-link:hover::after{
+        content: '';
         display: block;
+        border-bottom: 3px solid blue;
+        width: 50%;
         margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
     }
-    .text-signature{
-        width: 100%;
+
+    .jumbotron{
+        margin-top: -75px;
+        height: 640px;
+    }
+    .jumbotron .display-4{
+        font-size: 62px;
+    }
+    .newproduk h3{
+        text-transform: uppercase;
+        font-size: 32px;
+        cursor: pointer;
+    }
+    .newproduk h3::before{
+        content: '';
+        display: flex;
+        border-top: 3px solid salmon;
+        width: 15%;
+        margin: auto;
+        padding-top: 5px;
+        margin-top: -8px;
+        cursor: pointer;
+    }
+    .newproduk h4{
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+    .newproduk .card-deck img{
+        cursor: pointer;
+        width: 200px;
+        height: 300px;
+        padding-top: 50px;
+    }
+    .ourstory img{
+        width: 450px;
         height: auto;
-        margin: auto;
-        float: left;
+        cursor: pointer;
     }
-    .sign{
-        margin: 20px auto;
-        width: 100%;
-        position: relative;
+    .ourstory p,a{
+        text-align: justify ;
+        font-size: 20px;
+        padding-right: 20px;
+        padding-left: -40px;
+    
     }
-    /* .sign2{
-        margin: 20px auto;
-        width: 100%;
-        position: relative;
- 
+    .ourstory h3{
+        cursor: pointer;
+        font-size: 32px;
+        padding-right: 20px;
+        padding-left: -40px;
+    
     }
-    .sign3{
-        margin: 20px auto;
-        width: 100%;
-        position: relative;
-    } */
-    .wrapper-masker{
-        margin:  auto;
-        width: 100px;
-        position: relative;
-    }
-    .logo-masker{
-        width: 100%;
-        margin: 10px auto;
-    }
-    .wrapper-promo{
-        width: 100%;
-        height: 220vh;
-    }
-    .promo ul{
-        width: 100%;
+    .ourstory h3::after{
+        content: '';
         display: block;
+        border-bottom: 3px solid rgb(167, 83, 74);
+        width: 40%;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+        border-color: salmon;
+        margin: auto;  
+        cursor: pointer;     
     }
-    .wrapper-est{
-        width: 100%;
+    .wheretobuy img{
+        width: 250px;
+        height: 150px;
+        cursor: pointer;
     }
-    .content{
-        width: auto;
-        margin: 0px 10px;
+    .wheretobuy p,a{
+        text-align: center ;
+        font-size: 20px;
     }
-    .wrapper-store{
-        width: 100%;
-        height: 45vh;
+    .wheretobuy h3{
+        cursor: pointer;
+        font-size: 32px;
     }
-    .content2{
+    .wheretobuy h3::after{
+        content: '';
         display: block;
+        border-bottom: 3px solid rgb(167, 83, 74);
+        width: 15%;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+        border-color: salmon;
+        margin: auto;  
+        cursor: pointer;     
     }
-    .content2 h2{
-        width: auto;
-        margin: 30px;
+    .contact p{
+        font-size: 20px;
+        padding-right: 20px;
+        padding-left: -40px;
+
     }
-    .wrapper-best{
-        width: 100%;
-        height: 60vh;
+    .contact h3{
+        cursor: pointer;
+        font-size: 32px;
+        padding-right: 20px;
+        padding-left: -40px;
+    
     }
-    .content3{
-        width: auto;
+    .contact h3::after{
+        content: '';
+        display: block;
+        border-bottom: 3px solid rgb(167, 83, 74);
+        width: 40%;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+        border-color: salmon;
+        cursor: pointer;     
     }
-    .wrapper-footer{
-        width: 100%;
-        height: 20vh;
-    }
-    .footer{
-        width: 100%;
-    }
+
     .copyright{
-        float: none;
+        font-size: 15px;
+        font-family: 'calibri';
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        align-items: center;
     }
-}
+    
+    
 
-
-
-/*.container {
-    max-width: 1200px;
-}
-.icon i {
-    font-size: 60px;
-}
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5 {
-    padding-right: 12px;
-    padding-left: 12px;
-}
-#blog .card-img-top{
-    max-height:200px;
-    object-fit:cover;
-}
-.card img{
-       width : 200px;
+    .store {
+        text-transform: uppercase;
+        border-radius: 30px;
+        width: 100%;
     }
-.navbar {
-    align-content: center;
+    .tombol {
+        text-transform: uppercase;
+        border-radius: 30px;
+    }
+    
 }

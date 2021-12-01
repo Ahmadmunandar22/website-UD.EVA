@@ -2,7 +2,7 @@
 
 require_once("connection.php");
 
-$query="SELECT * FROM produk_keripik" ;
+$query="SELECT * FROM produk" ;
 $result=mysqli_query($mysqli,$query);
 
 //mengecek dan mendapatkan data session
@@ -93,15 +93,15 @@ require_once("session_check.php")
       </li>
 
       <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
           <span class="badge badge-danger navbar-badge">3</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
+             Message Start -->
+            <!-- <div class="media">
               <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
@@ -111,13 +111,13 @@ require_once("session_check.php")
                 <p class="text-sm">Call me whenever you can...</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
-            </div>
+            </div> -->
             <!-- Message End -->
-          </a>
+          <!-- </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
+             Message Start -->
+            <!-- <div class="media">
               <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
@@ -127,13 +127,13 @@ require_once("session_check.php")
                 <p class="text-sm">I got your message bro</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
-            </div>
+            </div>  -->
             <!-- Message End -->
-          </a>
+          <!-- </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#" class="dropdown-item"> -->
             <!-- Message Start -->
-            <div class="media">
+            <!-- <div class="media">
               <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
@@ -143,15 +143,15 @@ require_once("session_check.php")
                 <p class="text-sm">The subject goes here</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
-            </div>
+            </div> -->
             <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
+          <!-- </a> -->
+          <!-- <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a> -->
+        <!-- </div> -->
+      <!-- </li> --> 
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
           <span class="badge badge-warning navbar-badge">15</span>
@@ -176,7 +176,7 @@ require_once("session_check.php")
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
@@ -894,7 +894,7 @@ require_once("session_check.php")
               </div>
 
               <div class="col text-end">
-                  <a class="btn btn-primary" href="form_produk_keripik.php" role="button">Tambah produk</a>
+                  <a class="btn btn-primary" href="form_produk.php" role="button">Tambah produk</a>
               </div>
           </div>
 
@@ -907,7 +907,7 @@ require_once("session_check.php")
                               <th scope="col">Foto</th>
                               <th scope="col">Id_produk</th>
                               <th scope="col">nama_produk</th>
-                              <th scope="col">rasa</th>
+                              <th scope="col">detail</th>
                               <th scope="col">harga </th>
                               <th scope="col">Aksi</th>                                    
                           </tr>
@@ -915,21 +915,21 @@ require_once("session_check.php")
                       <tbody>
                           <?php
                           $i = 1;
-                          foreach($result as $produk_keripik){
-                              if($produk_keripik['foto'] == null || empty($produk_keripik["foto"])) {
-                                  $produk_keripik['foto'] = 'penyimpanan/default.jpeg';
+                          foreach($result as $produk){
+                              if($produk['foto'] == null || empty($produk["foto"])) {
+                                  $produk['foto'] = 'penyimpanan/default.jpeg';
                               }
 
                               echo '<tr>
                               <th scope="row">' . $i++ . '</th>
-                              <td><img src="'. $produk_keripik["foto"] . '" /></td>
-                              <td>' . $produk_keripik["id_produk"] . '</td>
-                              <td>' . $produk_keripik["nama_produk"] . '</td>
-                              <td>' . $produk_keripik["rasa"] . '</td>
-                              <td>' . $produk_keripik["harga"] . '</td>
+                              <td><img src="'. $produk["foto"] . '" /></td>
+                              <td>' . $produk["id_produk"] . '</td>
+                              <td>' . $produk["nama_produk"] . '</td>
+                              <td>' . $produk["detail"] . '</td>
+                              <td>' . $produk["harga"] . '</td>
                               <td>
-                              <a href="form_edit.php?id_produk=' . $produk_keripik["id_produk"] . '">edit</a>
-                              <a href="delete.php?id_produk=' . $produk_keripik["id_produk"] . '" onclick="return confirm_delete()">Delete</a>
+                              <a href="form_edit.php?id_produk=' . $produk["id_produk"] . '">edit</a>
+                              <a href="delete.php?id_produk=' . $produk["id_produk"] . '" onclick="return confirm_delete()">Delete</a>
                               </td>
                           </tr>';
                           }
@@ -948,23 +948,22 @@ require_once("session_check.php")
       </div>
   </div>
 
-    <!-- /.content -->
-  </div>
+
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
+  <!-- <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.1.0
     </div>
-  </footer>
-
+  </footer> -->
+</div>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-</div>
+
 <!-- ./wrapper -->
 
 <!-- jQuery -->

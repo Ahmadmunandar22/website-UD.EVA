@@ -2,29 +2,29 @@
 
 require_once("connection.php");
 
-//mendapatkan data id produk_keripik
+//mendapatkan data id produk
 if(isset($_POST['id_produk']))$id_produk=$_POST['id_produk'];
 else{
     echo "Id Produk tidak ditemukan! <a href='admin.com'>Kembali</a>";
     exit();
 }
 
-//query untuk get data produk_keripik
-$query = "SELECT * FROM produk_keripik WHERE id_produk='{$id_produk}'";
+//query untuk get data produk
+$query = "SELECT * FROM produk WHERE id_produk='{$id_produk}'";
 
 //eksekusi query
 $result=mysqli_query($mysqli, $query);
 
 //fetching data
-foreach($result as $produk_keripik){
-    $foto = $produk_keripik['foto'];
-    $nama_produk=$produk_keripik['nama_produk'];
-    $rasa=$produk_keripik['rasa'];
-    $harga=$produk_keripik['harga'];
+foreach($result as $produk){
+    $foto = $produk['foto'];
+    $nama_produk=$produk['nama_produk'];
+    $detail=$produk['detail'];
+    $harga=$produk['harga'];
 }
 
 if (isset($_POST['nama_produk'])) $nama_produk=$_POST['nama_produk'];
-if (isset($_POST['rasa'])) $rasa=$_POST['rasa'];
+if (isset($_POST['detail'])) $detail=$_POST['detail'];
 if (isset($_POST['harga'])) $harga=$_POST['harga'];
 
 //mengambil data file upload
@@ -52,9 +52,9 @@ if($upload != true && $filepath != $foto) {
 }
 //menyiapkan query untuk diekssekusi
 $query="
-UPDATE produk_keripik SET
+UPDATE produk SET
 nama_produk='{$nama_produk}',
-rasa='{$rasa}',
+detail='{$detail}',
 harga='{$harga}',
 foto='{$filepath}'
 WHERE id_produk = '{$id_produk}'

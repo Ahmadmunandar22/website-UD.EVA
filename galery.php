@@ -1,15 +1,3 @@
-<?php
-
-require_once("connection.php");
-
-$query="SELECT * FROM produk" ;
-$result=mysqli_query($mysqli,$query);
-
-//mengecek dan mendapatkan data session
-// require_once("session_check.php")
-
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -68,9 +56,7 @@ $result=mysqli_query($mysqli,$query);
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active" href="galery.php">Galery <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#ourstory">Our Story</a>
-          <a class="nav-item nav-link" href="#wheretobuy">Where To Buy</a>
+          <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="#contact">Contact Us</a>
           <a class="nav-item btn btn-primary tombol" href="login.php">Login</a>
           </div>
@@ -118,70 +104,42 @@ $result=mysqli_query($mysqli,$query);
   <div class="container">
     <div class="col newproduk">
       <div class="col-lg ml-auto">
-        <h3>New Produk</h3>
+        <h3>Our Produk</h3>
       </div>
       <div class="card-deck">
         <div class="col-lg">
+          <img src="image/1.jpg"  class="card-img-top">
+          <h4>konektor masker rajut</br> "Motif 3 Bunga"</h4>
+        </div>
+        <div class="col-lg">
           <img src="image/5.jpg"  class="card-img-top">
-          <h4>konektor masker rajut</h4>
-        </div>
-        <?php
-                          // $i = 1;
-                          // foreach($result as $produk){
-                          //     if($produk['foto'] == null || empty($produk["foto"])) {
-                          //         $produk['foto'] = 'penyimpanan/default.jpeg';
-                          //     }
-
-                          //     echo '
-                          //     <div class="col-lg">                  
-                          //     <h4 scope="row">' . $i++ . '</h4></br>
-                          //     <img src="'. $produk["foto"] . '" /></br>
-                          //     <h4>' . $produk["nama_produk"] . '</h4></br>
-                          //     <h4>' . $produk["detail"] . '</h4></br>
-                          //     <h4>' . $produk["harga"] . '</h4></br>
-                          // </div>';
-                          // }
-                          ?>
-      </div>
-    </div>
-  </div>
-  <!-- akhir new produk -->
-
-  <!-- ourstory -->
-  <div class="container-fluid" id="ourstory">
-    <div class="row ourstory">
-      <div class="col-lg">
-        <img src="image/ourstory.jpg" alt="ourstory" class="img-fluid">
-      </div>
-      <div class="col-lg">
-        <h3>our <span>story</span> the <span>UD.EvA</span></h3>
-        <p>UD.EvA is a handicraft company in Situbondo. We pride ourselves in producing handicrafts such as knitting mask connectors, flower bouquets, and graduation bouquets using the best materials. Our products are now enjoyed by people in our city and beyond. UD.EvA also has hand-processed products, namely "nyamot" cassava chips, while maintaining excellent taste and quality.</p>
-        <a href="" class="btn btn-primary tombol">Read More</a>
-      </div>
-    </div>
-  </div>
-  <!-- akhir our story -->
-
-  <!-- where to buy -->
-  <div class="container" id="wheretobuy">
-    <div class="row justify-content-center">
-      <div class="col-10 wheretobuy">
-        <div class="row">
-          <div class="col-lg">
-              <h3>where <span>To</span> buy</h3>
-              <p>
-              Anda dapat membeli produk kami di Supermarket dan Toko Kelontong favorit Anda. Anda juga dapat membeli produk kami di Official Store kami di Tokopedia, bukalapak dan shopee.</p>
-              <div class="col-lg store">
-                <img src="image/bukalapak.png"  alt="bukalapak">
-                <img src="image/shopee.jpg" alt="shopee">
-                <img src="image/tokopedia.png"  alt="tokopedia">
-              </div>
-          </div>
+          <h4>konektor masker rajut </br>pin 555</h4>
+        </div><div class="col-lg">
+          <img src="image/6.jpg"  class="card-img-top">
+          <h4>konektor masker rajut</br>"motif 2bunga daun" </h4>
+        </div><div class="col-lg">
+          <img src="image/7.jpg"  class="card-img-top">
+          <h4>konektor masker rajut</br>"bunga fanel pelangi" </h4>
+        </div><div class="col-lg">
+          <img src="image/8.jpg"  class="card-img-top">
+          <h4>konektor masker rajut</br>"motif bunga fanel" </h4>
+        </div><div class="col-lg">
+          <img src="image/9.jpg"  class="card-img-top">
+          <h4>konektor masker rajut</br>mutiara</h4>
+        </div><div class="col-lg">
+          <img src="image/10.jpg"  class="card-img-top">
+          <h4>konektor masker rajut</br>mutiara</h4>
+        </div><div class="col-lg">
+          <img src="image/11.jpg"  class="card-img-top">
+          <h4>konektor masker rajut</br>"motif zigzag"</h4>
+        </div><div class="col-lg">
+          <img src="image/keripik.jpg"  class="card-img-top">
+          <h4>keripik singkong </br> rasa bawang putih</h4>
         </div>
       </div>
     </div>
   </div>
-  <!-- akhir where to buy -->
+
 
   <!-- contact us -->
   <div class="container-fluid" id="contact" >

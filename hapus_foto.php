@@ -10,14 +10,14 @@ else{
 }
 
 //query get data barang
-$query = "SELECT * FROM produk_keripik WHERE id_produk = '{$id_produk}'";
+$query = "SELECT * FROM produk WHERE id_produk = '{$id_produk}'";
 
 //eksekusi query
 $result = mysqli_query($mysqli, $query);
 
 //fetaching data
-foreach($result as $barang){
-    $foto = $produk_keripik['foto'];
+foreach($result as $produk){
+    $foto = $produk['foto'];
 }
 
 if(!is_null($foto) && !empty($foto)){
@@ -25,7 +25,7 @@ if(!is_null($foto) && !empty($foto)){
 
     if($remove){
         //meiapkan query mysql untuk di eksekusi
-        $query = "UPDATE produk_keripik SET 
+        $query = "UPDATE produk SET 
         foto = NULL 
         WHERE id_produk = '{$id_produk}'";
 

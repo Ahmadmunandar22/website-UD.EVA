@@ -1,36 +1,13 @@
 <?php
 
-//pemanggilan file koneksi
 require_once("connection.php");
 
-//status tidak error
-$error = 0;
+$query="SELECT * FROM produk" ;
+$result=mysqli_query($mysqli,$query);
 
-//mendapatkan data Id_produk
-if (isset($_GET["id_produk"])) $id_produk = $_GET["id_produk"];
-else echo "Id Produk tidak ditemukan! <a href='admin.php'>Kembali</a>";
+//mengecek dan mendapatkan data session
+require_once("session_check.php")
 
-$query = "SELECT * FROM produk WHERE id_produk = '{$id_produk}'";
-
-$result = mysqli_query($mysqli, $query);
-
-foreach ( $result as $produk) {
-    $foto = $produk["foto"];
-    $id_produk = $produk["id_produk"];
-    $nama_produk = $produk["nama_produk"];
-    $detail = $produk["detail"];
-    $harga = $produk["harga"];
-
-}
-
-
-// panggil file session check
-require_once("session_check.php");
-
-// cek apakah petugas telah login
-if($sessionStatus == false) {
-    header("location:admin.php");
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -110,15 +87,15 @@ if($sessionStatus == false) {
       </li>
 
       <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
           <span class="badge badge-danger navbar-badge">3</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
+          <a href="#" class="dropdown-item"> -->
             <!-- Message Start -->
-            <div class="media">
+            <!-- <div class="media">
               <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
@@ -128,13 +105,13 @@ if($sessionStatus == false) {
                 <p class="text-sm">Call me whenever you can...</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
-            </div>
+            </div> -->
             <!-- Message End -->
-          </a>
+          <!-- </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
+             Message Start -->
+            <!-- <div class="media">
               <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
@@ -144,13 +121,13 @@ if($sessionStatus == false) {
                 <p class="text-sm">I got your message bro</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
-            </div>
+            </div> -->
             <!-- Message End -->
-          </a>
+          <!-- </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#" class="dropdown-item"> -->
             <!-- Message Start -->
-            <div class="media">
+            <!-- <div class="media">
               <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
@@ -160,13 +137,13 @@ if($sessionStatus == false) {
                 <p class="text-sm">The subject goes here</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
-            </div>
+            </div> -->
             <!-- Message End -->
-          </a>
+          <!-- </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
         </div>
-      </li>
+      </li> -->
       <!-- Notifications Dropdown Menu -->
       <!-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
@@ -279,41 +256,8 @@ if($sessionStatus == false) {
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <!-- form edit produk keripik --> 
+    <!-- form produk keripik --> 
     <div id="form" class="pt-5">
-            <div class="container">
-                <div class="row d-flex justify-content-center">
-                    <div class="col col-8 p-4 bg-light">
-                        <form action="action.edit.php" method="POST" enctype="multipart/form-data">
-                        <?php if(!is_null($foto) && !empty($foto)) : ?>
-                            <div class="form-group mb-2">
-                                <img src="<?=$foto ?>" class="preview" />
-                                <a href="hapus_foto.php?id_produk=<?=$id_produk?>">Hapus foto</a>
-                            </div>
-                            <?php endif; ?>
-                            <div class="form-group mb-2">
-                                <label for="foto">Foto</label>
-                                <input name="foto" id="foto" class="form-control" type="file" />
-                            </div>
-                        <div class="form-group mb-2">
-                            <label for="id_produk">Id Produk</label>
-                            <input id="id_produk" class="form-control" type="text" placeholder="Id Produk" required name="id_produk" value="<?=$id_produk?>"/>
-                        </div>
-                <div class="form-group mb-2">
-                    <label for="nama_produk">Nama Produk</label>
-                    <input id="nama_produk" class="form-control" type="text" placeholder="Nama Produk " required name="nama_produk" value="<?=$nama_produk?>"/>
-                </div>
-                <div class="form-group mb-2">
-                    <label for="detail">detail</label>
-                    <input id="detail" class="form-control" type="text" placeholder="detail" required name="detail" value="<?=$detail?>"/>
-                </div>
-                <div class="form-group mb-2">
-                    <label for="harga">Harga</label>
-                    <input id="harga" class="form-control" type="text" placeholder="Harga" required name="harga" value="<?=$harga?>"/>
-                </div>
-                <input name="submit" type="submit" value="kirim" class="btn btn-primary" />
-
-    <!-- <div id="form" class="pt-5">
             <div class="container">
                 <div class="row d-flex justify-content-center">
                     <div class="col col-8 p-4 bg-light">
@@ -343,7 +287,7 @@ if($sessionStatus == false) {
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
     <!-- /.content -->
   </div>

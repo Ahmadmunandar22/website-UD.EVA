@@ -12,7 +12,7 @@ else $error=1; //status error
 if(isset($_POST['nama_produk'])) $nama_produk = $_POST['nama_produk'];
 else $error=1; //status error
 
-if(isset($_POST['rasa'])) $rasa = $_POST['rasa'];
+if(isset($_POST['detail'])) $detail = $_POST['detail'];
 else $error=1; //status error
 
 if(isset($_POST['harga'])) $harga = $_POST['harga'];
@@ -40,15 +40,15 @@ else{
 
 //menangani error saat mengupload
 if($upload != true && $filepath != ""){
-    exit("Gagal Mengupload file <a href='form_admin.php'>Kembali</a>");
+    exit("Gagal Mengupload file <a href='admin.php'>Kembali</a>");
 }
 
 //menyiapkan query mysql untuk dieksekusi
 $query = "
-    INSERT INTO produk_keripik 
-    (id_produk, nama_produk, rasa, harga, foto)
+    INSERT INTO produk 
+    (id_produk, nama_produk, detail, harga, foto)
     VALUES
-    ('{$id_produk}', '{$nama_produk}','{$rasa}', '{$harga}','{$filepath}');";
+    ('{$id_produk}', '{$nama_produk}','{$detail}', '{$harga}','{$filepath}');";
 
 //mengeksekusi mysql query
 $insert=mysqli_query($mysqli, $query);
