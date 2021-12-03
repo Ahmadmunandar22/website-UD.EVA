@@ -1,3 +1,15 @@
+.body{
+    background-image: url(image/floor-tile.png);
+    background-repeat: repeat;
+}
+/* tombol Whatsapp */
+/* .wabutton img{
+    width:50px;
+    height:50px;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    } */
 /* scroll up */
 #myBtn {
     display: none;
@@ -111,18 +123,19 @@
     width: 150px;
     height: 250px;
 }
-.newproduk h4{
-    padding-top: 20px;
-    font-size: 12px;
+.newproduk h4 {
+    padding-top: 40px;
 }
 /* ourstory */
 .ourstory {
-    margin-top: 30px;
+    margin: 30px 0px 0px;
     text-align: center;
     background-color: slategray ;
-    padding-right: 30px;
+    /* padding-right: 30px; */
     font-family: 'Akaya Telivigala', cursive;
-
+    align-items: center;
+    /* margin: auto; */
+    padding-right: 50px;
 }
 .ourstory img{
     width: 300px;
@@ -135,26 +148,28 @@
     text-transform: uppercase;
     margin-top: 60px;
     color: salmon;
-    padding-right: 20px;
-    padding-left: -40px;
+
 }
 .ourstory h3 span {
     font-weight: 500;
+}
+.ourstory .col-lg{
+    margin: auto;
+    padding-left: 20px;
 }
 .ourstory p {
     font-size: 12px;
     font-weight: 200;
     color:silver;
-    margin: 30px 0px;
-    padding-right: 20px;
-    padding-left: -40px;
+    /* margin: auto; */
+    padding-right: auto;
 }
-.ourstory a{
+/* .ourstory a{
     align-items: center;
     padding-right: 20px;
     padding-left: -40px;
 
-}
+} */
 /* where to buy */
 .wheretobuy{
     font-family: 'Akaya Telivigala', cursive;
@@ -186,8 +201,12 @@
 .contact {
     margin-top: 25px;
     background-color: rgb(158, 178, 199) ;
-    padding-right: 100px;
+    padding-left: 40px;
     padding-top: 20px;
+    
+}
+.row.contact{
+    padding-left: 30px;
 }
 .contact h3 {
     font-size: 20px;
@@ -268,6 +287,7 @@
     .newproduk h4{
         text-transform: uppercase;
         font-size: 20px;
+        padding-top: none;
     }
     .newproduk .card-deck img{
         cursor: pointer;
@@ -275,23 +295,24 @@
         height: 300px;
         padding-top: 50px;
     }
+    
     .ourstory img{
         width: 450px;
         height: auto;
         cursor: pointer;
     }
-    .ourstory p,a{
+    .ourstory p{
         text-align: justify ;
         font-size: 20px;
-        padding-right: 20px;
-        padding-left: -40px;
-    
+        /* padding-right: 20px;
+        padding-left: -40px; */
+        margin: auto;
     }
     .ourstory h3{
         cursor: pointer;
         font-size: 32px;
-        padding-right: 20px;
-        padding-left: -40px;
+        /* padding-right: 20px;
+        padding-left: -40px; */
     
     }
     .ourstory h3::after{

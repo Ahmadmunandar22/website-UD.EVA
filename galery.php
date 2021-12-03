@@ -18,9 +18,10 @@
   <body>
 
     <!-- tombol link ke Whatsapp -->
-	<div style="position:fixed;left:30px;bottom:35px;z-index:99999;">
-    <a href="https://wa.widget.web.id/20f2be" target="_blank"><img src="https://wa.widget.web.id/assets/img/tombol-wa.png"></a>
-	</div>
+    <div href="https://api.whatsapp.com/send?phone=6282302014339">
+        <img src="https://hantamo.com/free/whatsapp.svg" alt="" style="position:fixed;left:30px;bottom:35px;z-index:99999; width:50px;">
+      </a>
+      </div>
 
     <!-- tombol sroll up -->
     <button class="rounded-circle" onclick="topFunction()" id="myBtn" title="Go to top" style="width: 60px; height:60px;"><img src="image/top.JPG" class="rounded-circle" style="width: 50px; height:50px;"></button>
@@ -57,6 +58,8 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="ourstory.php">Our Story</a>
+
           <a class="nav-item nav-link" href="#contact">Contact Us</a>
           <a class="nav-item btn btn-primary tombol" href="login.php">Login</a>
           </div>
@@ -69,7 +72,7 @@
   <div class="jumbotron jumbotron-fluid" style="background-image:url(image/jumbotron.jpg);background-size: cover;">
     <div class="container" >
       <h1 class="display-4">We only make <span>the best</span> products </br>for your<span> convenience</span> </h1>
-      <a href="" class="btn btn-primary tombol">Our Work</a>
+      <a href="https://linkr.bio/eyn.flowers" class="btn btn-primary tombol">Our Work</a>
     </div>
   </div>
   <!-- akhirjumbotron -->

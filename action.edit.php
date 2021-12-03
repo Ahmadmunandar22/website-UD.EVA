@@ -5,7 +5,7 @@ require_once("connection.php");
 //mendapatkan data id produk
 if(isset($_POST['id_produk']))$id_produk=$_POST['id_produk'];
 else{
-    echo "Id Produk tidak ditemukan! <a href='admin.com'>Kembali</a>";
+    echo "Id Produk tidak ditemukan! <a href='admin.php'>Kembali</a>";
     exit();
 }
 
@@ -33,15 +33,15 @@ $path = "penyimpanan/";
 
 //menangani file upload
 if(!empty($files['name'])){
-    $filepath = $path . $files['name'];
+    $filepath = $path . $files["name"];
 
-    $upload = move_uploaded_file($files['tmp_name'], $filepath);
+    $upload = move_uploaded_file($files["tmp_name"], $filepath);
 
-    if($upload){
+    if ( $upload ){
         unlink($foto);
     }
 } else{
-    $filepath='';
+    $filepath=$foto;
     $upload=false;
 }
 

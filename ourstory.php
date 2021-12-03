@@ -1,15 +1,3 @@
-<?php
-
-require_once("connection.php");
-
-$query="SELECT * FROM produk" ;
-$result=mysqli_query($mysqli,$query);
-
-//mengecek dan mendapatkan data session
-// require_once("session_check.php")
-
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,12 +13,12 @@ $result=mysqli_query($mysqli,$query);
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
     <!-- css -->
 		<link rel="stylesheet" href="css/style.css">
-    <title>UD.EvA</title>
+    <title>UD.EvA | ourstory</title>
   </head>
   <body>
 
     <!-- tombol link ke Whatsapp -->
-      <div href="https://api.whatsapp.com/send?phone=6282302014339">
+    <div href="https://api.whatsapp.com/send?phone=6282302014339">
         <img src="https://hantamo.com/free/whatsapp.svg" alt="" style="position:fixed;left:30px;bottom:35px;z-index:99999; width:50px;">
       </a>
       </div>
@@ -69,9 +57,7 @@ $result=mysqli_query($mysqli,$query);
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link " href="galery.php">Galery <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="ourstory.php">Our Story</a>
-          <a class="nav-item nav-link" href="#wheretobuy">Where To Buy</a>
+          <a class="nav-item nav-link" href="index.php">Home</span></a>
           <a class="nav-item nav-link" href="#contact">Contact Us</a>
           <a class="nav-item btn btn-primary tombol" href="login.php">Login</a>
           </div>
@@ -115,39 +101,7 @@ $result=mysqli_query($mysqli,$query);
   </div>
   <!-- akhir panel -->
 
-  <!-- new produk -->
-  <div class="container">
-    <div class="col newproduk">
-      <div class="col-lg ml-auto">
-        <h3>New Produk</h3>
-      </div>
-      <div class="card-deck">
-        <!-- <div class="col-lg">
-          <img src=""  class="card-img-top">
-          <h4></h4>
-        </div> -->
-        <?php
-                          $i = 1;
-                          foreach($result as $produk){
-                              if($produk['foto'] == null || empty($produk["foto"])) {
-                                  $produk['foto'] = 'penyimpanan/default.jpeg';
-                              }
-
-                              echo '
-                              <div class="col-lg">                  
-                              <img src="'. $produk["foto"] . '" />
-                              <h5>' . $produk["nama_produk"] . '</h4>
-                              <h5>' . $produk["detail"] . '</h4>
-                              <h5>' . $produk["harga"] . '</h4>
-                          </div>';
-                          }
-                          ?>
-      </div>
-    </div>
-  </div>
-  <!-- akhir new produk -->
-
-  <!-- ourstory -->
+  <!-- our story-->
   <div class="container-fluid" id="ourstory">
     <div class="row ourstory">
       <div class="col-lg">
@@ -155,33 +109,23 @@ $result=mysqli_query($mysqli,$query);
       </div>
       <div class="col-lg">
         <h3>our <span>story</span> the <span>UD.EvA</span></h3>
-        <p>UD. EVA adalah IKM asal Situbomdo yg bergerak dibidang kerajinan rajut, flanel dan Olahan Singkong. adapun kerajinan rajut yg diproduksi Oleh UD. EVA berfokus pada konektor rajut dan strip masker rajut. Mengingat pentingnya masker untuk digunakan pada zaman sekarang ini untuk menjaga kesehatan. UD. Eva memproduksi konektor dan strip maskr untuk memudahkan para hijaber saat memakai masker agar tetap modis. Produk lainnya yaitu berbagai kerajinan bunga dari kain flanel, amplop dan tempat permen. </br>
-          <a href="ourstory.php" class="btn btn-primary tombol justify-content-center">Read More</a>
-          </div>
-    </div>
-  </div>
-  <!-- akhir our story -->
-
-  <!-- where to buy -->
-  <div class="container" id="wheretobuy">
-    <div class="row justify-content-center">
-      <div class="col-10 wheretobuy">
-        <div class="row">
-          <div class="col-lg">
-              <h3>where <span>To</span> buy</h3>
-              <p>
-              Anda dapat membeli produk kami di Supermarket dan Toko terdekat favorit Anda dan juga dapat membeli produk kami di Official Store kami di shopee.anda juga dapat menghubungi kami melalui Whatsapp.</p>
-              <div class="col-lg store">
-                <a href="https://shopee.co.id/evayuliananingrum"><img src="image/shopee.jpg" alt="shopee"></a>
-                <a href="https://api.whatsapp.com/send?phone=6282302014339"><img src="image/whatsapp.jpg" alt="whatsapp" style="width: 150px; height:135px"></a>
-
-              </div>
-          </div>
-        </div>
+        <p>UD. EVA adalah IKM asal Situbomdo yg bergerak dibidang kerajinan rajut, flanel dan Olahan Singkong. adapun kerajinan rajut yg diproduksi Oleh UD. EVA berfokus pada konektor rajut dan strip masker rajut. Mengingat pentingnya masker untuk digunakan pada zaman sekarang ini untuk menjaga kesehatan. UD. Eva memproduksi konektor dan strip maskr untuk memudahkan para hijaber saat memakai masker agar tetap modis. Produk lainnya yaitu berbagai kerajinan bunga dari kain flanel, amplop dan tempat permen.</br>
       </div>
     </div>
   </div>
-  <!-- akhir where to buy -->
+    </br>
+  <div class="container-fluid" id="ourstory">
+    <div class="row ourstory">
+        <div class="col-lg">
+            <p>UD. EVA adalah IKM asal Situbomdo yg bergerak dibidang kerajinan rajut, flanel dan Olahan Singkong. adapun kerajinan rajut yg diproduksi Oleh UD. EVA berfokus pada konektor rajut dan strip masker rajut. Mengingat pentingnya masker untuk digunakan pada zaman sekarang ini untuk menjaga kesehatan. UD. Eva memproduksi konektor dan strip maskr untuk memudahkan para hijaber saat memakai masker agar tetap modis. Produk lainnya yaitu berbagai kerajinan bunga dari kain flanel, amplop dan tempat permen.</br>
+        </div>
+        <div class="col-lg">
+          <img src="image/keripik.jpg" alt="keripik" class="img-fluid">
+        </div>
+    </div>
+  </div>
+
+
 
   <!-- contact us -->
   <div class="container-fluid" id="contact" >
